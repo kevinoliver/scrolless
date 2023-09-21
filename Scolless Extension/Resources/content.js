@@ -21,3 +21,6 @@ if (delta != 0) {
         }
     });
 }
+
+// Page down button by Icons8:
+// https://icons8.com/icon/WpcZH0ZKKAkr/page-down-button
