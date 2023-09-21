@@ -1,23 +1,20 @@
-//browser.runtime.sendMessage({ greeting: "hello" }).then((response) => {
-//    console.log("Received response: ", response);
-//});
-//
-//browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//    console.log("Received request: ", request);
-//});
-console.log("Hello from my Scrolless extension!");
+// console.log("Hello from my Scrolless extension!");
 
-// This script listens for keyboard events and modifies the browser's scrolling behavior.
+// possible solution which srolls only once:
+// https://stackoverflow.com/questions/69257481/can-i-change-the-amount-that-pagedown-pageup-scrolls-the-page-to-avoid-some-con
+
+// ko todo: only enable for some sites and control the scroll amount by site
+
+// listens for keyboard events and modifies the browser's scrolling behavior.
 window.addEventListener("keydown", function(event) {
-    // ko todo: make sure not shift+space
-    if (event.key === "PageDown" || event.key === " ") {
-        console.log("scrolling less for '" + event.key + "'");
-        // Scroll the page 100 pixels back up
-        window.scrollBy(0, -100);
-    } else if (event.key === "PageUp") {
-        // ko todo: shift+space modifier
-        console.log("scrolling less for '" + event.key + "'");
-        // Scroll the page 100 pixels back down
-        window.scrollBy(0, +100);
+    var delta = 90;
+    if (event.key === "PageDown" || (event.key === " " && !event.getModifierState("Shift"))) {
+        console.log("scrolling down less for '" + event.key + "'");
+        // Scroll the page back up
+        window.scrollBy(0, -delta);
+    } else if (event.key === "PageUp" || (event.key === " " && event.getModifierState("Shift"))) {
+        console.log("scrolling up less for '" + event.key + "'");
+        // Scroll the page back down
+        window.scrollBy(0, delta);
     }
 });
