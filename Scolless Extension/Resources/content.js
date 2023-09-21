@@ -6,7 +6,7 @@ var hostname = window.location.hostname;
 if (hostname === "www.sfchronicle.com") {
    delta = 90;
 } else if (hostname === "theathletic.com") {
-   delta = 30;
+   delta = 0;
 }
 
 if (delta != 0) {
