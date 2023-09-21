@@ -17,7 +17,7 @@ Then turn on Developer mode in Safari and then [allow running of unsigned extens
 
 ## Usage
 
-The sites and amount to scroll are hard-coded in `content.js` and `manifest.json`.
+The sites and amount to scroll are hard-coded in [`content.js`](Scolless%20Extension/Resources/content.js) and [`manifest.json`](Scolless%20Extension/Resources/manifest.json).
 
 ## Attribution
 
