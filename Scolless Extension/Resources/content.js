@@ -1,7 +1,6 @@
-// possible solution which srolls only once:
-// https://stackoverflow.com/questions/69257481/can-i-change-the-amount-that-pagedown-pageup-scrolls-the-page-to-avoid-some-con
+// listens for keyboard events and modifies the browser's scrolling behavior
+// to scroll back up or down after page down or up.
 
-// ko todo: make this a hashmap
 var delta = 0;
 var hostname = window.location.hostname;
 if (hostname === "www.sfchronicle.com") {
@@ -9,18 +8,15 @@ if (hostname === "www.sfchronicle.com") {
 } else if (hostname === "theathletic.com") {
    delta = 30;
 }
-console.log("Scrolless delta set to " + delta + " for hostname " + hostname);
 
 if (delta != 0) {
-    // listens for keyboard events and modifies the browser's scrolling behavior.
+    console.log("Scrolless delta set to " + delta + " for hostname " + hostname);
     window.addEventListener("keydown", function(event) {
+        // a different approach which scrolls only once:
+        // https://stackoverflow.com/questions/69257481/can-i-change-the-amount-that-pagedown-pageup-scrolls-the-page-to-avoid-some-con
         if (event.key === "PageDown" || (event.key === " " && !event.getModifierState("Shift"))) {
-            console.log("scrolling down less for '" + event.key + "'");
-            // Scroll the page back up
             window.scrollBy(0, -delta);
         } else if (event.key === "PageUp" || (event.key === " " && event.getModifierState("Shift"))) {
-            console.log("scrolling up less for '" + event.key + "'");
-            // Scroll the page back down
             window.scrollBy(0, delta);
         }
     });
