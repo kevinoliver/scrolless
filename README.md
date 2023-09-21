@@ -5,9 +5,9 @@ A Safari browser extension that makes paging down scroll a little less.
 ## Why
 
 On some sites there are overlays at the top or bottom of the window which cause
-paging down to scroll some of the next page's content underneath the overlay.  
-I'm looking at you SF Chronicle. 
-Then after page down I'd have manually scroll back up a couple lines. 
+paging down to scroll some of the next page's content underneath the overlay. I'm 
+looking at you SF Chronicle. Then after page down I'd have manually scroll 
+back up a couple lines. 
 
 ## Installation
 
