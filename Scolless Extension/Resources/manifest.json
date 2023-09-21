@@ -21,7 +21,10 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://*/*" ]
+        "matches": [
+            "*://www.sfchronicle.com/*",
+            "*://theathletic.com/*"
+        ]
     }],
 
     "browser_action": {
