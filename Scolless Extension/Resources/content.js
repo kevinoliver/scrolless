@@ -1,13 +1,13 @@
 // listens for keyboard events and modifies the browser's scrolling behavior
 // to scroll back up or down after page down or up.
 
-var delta = 0;
-var hostname = window.location.hostname;
-if (hostname === "www.sfchronicle.com") {
-    delta = 90;
-} else if (hostname === "www.nytimes.com") {
-    delta = 45;
+const DEFAULT_DELTA = 0;
+const hostnameDeltas = {
+    "www.sfchronicle.com": 90,
+    "www.nytimes.com": 45,
 }
+const hostname = window.location.hostname;
+const delta = hostnameDeltas[hostname] || DEFAULT_DELTA;
 
 if (delta != 0) {
     console.log("Scrolless delta set to " + delta + " for hostname " + hostname);
