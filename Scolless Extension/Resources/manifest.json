@@ -13,11 +13,7 @@
     
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [
-            "*://www.sfchronicle.com/*",
-            "*://www.nytimes.com/*",
-            "*://theathletic.com/*"
-        ]
+        "matches": [ "https://*/*" ]
     }],
 
     "permissions": [ ]

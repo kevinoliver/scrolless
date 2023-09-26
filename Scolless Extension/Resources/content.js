@@ -7,8 +7,6 @@ if (hostname === "www.sfchronicle.com") {
     delta = 90;
 } else if (hostname === "www.nytimes.com") {
     delta = 45;
-} else if (hostname === "theathletic.com") {
-    delta = 0;
 }
 
 if (delta != 0) {

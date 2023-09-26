@@ -6,7 +6,7 @@ A Safari browser extension that makes paging down scroll a little less.
 
 On some sites there are overlays at the top or bottom of the window which cause
 paging down to scroll some of the next page's content underneath the overlay. I'm 
-looking at you SF Chronicle. Then after page down I'd have manually scroll 
+looking at you NYTimes and SF Chronicle. Then after page down I'd have manually scroll 
 back up a couple lines. 
 
 ## Installation
@@ -17,7 +17,7 @@ Then turn on Developer mode in Safari and then [allow running of unsigned extens
 
 ## Usage
 
-The sites and amount to scroll are hard-coded in [`content.js`](Scolless%20Extension/Resources/content.js) and [`manifest.json`](Scolless%20Extension/Resources/manifest.json).
+The sites and amount to scroll are hard-coded in [`content.js`](Scolless%20Extension/Resources/content.js).
 
 ## Attribution
 
