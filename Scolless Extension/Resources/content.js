@@ -4,9 +4,11 @@
 var delta = 0;
 var hostname = window.location.hostname;
 if (hostname === "www.sfchronicle.com") {
-   delta = 90;
+    delta = 90;
+} else if (hostname === "www.nytimes.com") {
+    delta = 45;
 } else if (hostname === "theathletic.com") {
-   delta = 0;
+    delta = 0;
 }
 
 if (delta != 0) {
