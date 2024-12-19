@@ -3,8 +3,8 @@
 
 const DEFAULT_DELTA = 0;
 const hostnameDeltas = {
-    "www.nytimes.com": 45,
-    "www.quantamagazine.org": 45,
+    "www.nytimes.com": 55,
+    "www.quantamagazine.org": 90,
     "www.sfchronicle.com": 90,
 }
 const hostname = window.location.hostname;
