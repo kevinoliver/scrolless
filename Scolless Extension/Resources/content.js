@@ -3,9 +3,9 @@
 
 const DEFAULT_DELTA = 0;
 const hostnameDeltas = {
-    "www.sfchronicle.com": 90,
     "www.nytimes.com": 45,
     "www.quantamagazine.org": 45,
+    "www.sfchronicle.com": 90,
 }
 const hostname = window.location.hostname;
 const delta = hostnameDeltas[hostname] || DEFAULT_DELTA;
