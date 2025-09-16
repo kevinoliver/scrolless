@@ -1,0 +1,8 @@
+# standard mac ignore
+.DS_Store
+
+# Xcode
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+*.xcuserstate
+xcuserdata/
